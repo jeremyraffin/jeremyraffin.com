@@ -7,78 +7,182 @@
         <meta name="description" content="Développeur front-end à Bordeaux, développement d'application web progressive, Javascript, ReactJS, CSS3, HTML5">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+            html {
+                /* Box model */
+                box-sizing: border-box;
+
+                /* Typo */
+                font-size: 16px;
+            }
+
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+
             html,
             body {
                 margin: 0;
             }
-            html {
-                font-size: 16px;
-            }
 
             body {
-                font-family: 'Roboto Slab', serif;
-                padding: 2rem;
+                /* Typo */
+                font-family: 'Lato', sans-serif;
+                color: #555;
             }
-            h1 {
-                font-weight: 400;
-            }
-            h2 {
-                font-weight: 400;
-            }
-            p {
-                font-weight: 300;
-                max-width: 40rem;
-            }
-            ul {
-                font-weight: 300;
-                padding-left: 0;
-                list-style-type: none;
+
+            body > header {
                 display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
             }
-            li {
-                margin-right: 1rem;
+
+            h1, h2 {
+                color: #444;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            h1 {
+                /* Box model */
+                margin: 1rem 0 0;
+
+                /* Typo */
+                font-size: 2.5rem;
+                font-weight: 300;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+
+            main {
+                max-width: 45em;
+                margin: 0 auto;
+                padding: 1rem;
+            }
+
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+
+            hr {
+                /* Box model */
+                width: 6rem;
+                margin: 3rem 0;
+
+                /* Visual */
+                border: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            p, ul {
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 1.5;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+
+            p + p {
+                margin-top: 0;
+            }
+
+
+            strong {
+                font-weight: 400;
+            }
+
+            a, a:visited {
+                /* Box model */
+                padding-bottom: .2rem;
+
+                /* Typo */
+                color: #67B26F;
+                text-decoration: none;
+
+                /* Visual */
+                border-bottom: 1px solid #ddd;
+                transition: border-bottom-color .2s linear;
+            }
+
+            a:hover {
+                border-bottom-color: #67B26F;
+            }
+
+            ul {
+                /* Box model */
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0;
+                padding: 0 0 1rem;
+
+                /* Visual */
+                list-style-type: none;
+            }
+
+            li:not(:first-child) {
+                padding-left: .8rem;
+            }
+
+            li:not(:last-child):after {
+                /* Box model */
+                content: '•';
+                padding-left: .8rem;
+
+                /* Typo */
+                font-size: .8rem;
+                color: #ddd;
             }
         </style>
     </head>
     <body>
         <header>
+            <img width="125" height="125" src="jeremy-raffin.jpg" alt="Jérémy Raffin" />
             <h1>Jérémy Raffin</h1>
         </header>
         <main>
-            <header>
-                <h2>Développeur front-end</h2>
-            </header>
-            <p>
-                Bonjour, je suis Jérémy Raffin, développeur front-end au sein du groupe <a href="https://www.timeonegroup.com">@TimeOne</a> et auto-entrepreneur <a href="https://jrbros.fr">@JRBros</a>.
-            </p>
-            <p>
-                Je conçois et développe des interfaces et des applications single-page en Javascript avec l'écosystème ReactJS.
-            </p>
+            <section>
+                <header>
+                    <h2>Développeur front-end</h2>
+                </header>
+                <hr>
+                <p>
+                    Bonjour, je suis Jérémy Raffin, développeur front-end @ <a href="https://www.timeonegroup.com">TimeOne</a> et auto-entrepreneur @ <a href="https://jrbros.fr">JRBros</a>.
+                </p>
+                <p>
+                    Je conçois et développe des <strong>applications web</strong> <small>(Javascript, ReactJS, Redux, MobX)</small> et des <strong>sites web</strong> <small>(HTML5, CSS3, Wordpress)</small>.
+                </p>
+                <hr>
+                <footer>
+                    <ul>
+                        <li>
+                            <a href="https://medium.com/@JeremyRaffin" title="Visiter mon blog">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/jeremyraffin/" title="Visiter mon profil  Github">
+                                Github
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/JeremyRaffin" title="Visiter mon profil Twitter">
+                                Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:jeremy.raffin@gmail.com" title="Me contacter">
+                                Me contacter
+                            </a>
+                        </li>
+                    </ul>
+                </footer>
+            </section>
         </main>
-        <footer>
-            <ul>
-                <li>
-                    <a href="https://medium.com/@JeremyRaffin" title="Blog">
-                        Blog
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/jeremyraffin/" title="Github">
-                        Github
-                    </a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/JeremyRaffin" title="Twitter">
-                        Twitter
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:jeremy.raffin@gmail.com" title="Email">
-                        Me contacter
-                    </a>
-                </li>
-            </ul>
-        </footer>
     </body>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
 </html>
